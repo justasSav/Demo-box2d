@@ -1,8 +1,9 @@
 <html>
 <head>
-	<title>HTML5 + Box2D Adventure Game - Anderson Ferminiano</title>
+	<title>HTML5 BOX2D DEMO</title>
     
     <!--[if IE]><script type="text/javascript" src="lib/excanvas.js"></script><![endif]-->
+    <script src="lib/jquery-1.7.1.min.js">$.noConflict();</script>
     <script src="lib/prototype-1.6.0.2.js"></script>
 
 	<!-- box2djs -->
@@ -71,32 +72,55 @@
     <script src='js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
     <script src='js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
     <script src='js/box2dutils.js'></script>
-    <script src='js/game.js'></script>
+    <script src='js/demo.js'></script>
     <style type="text/css" media="screen" rel="stylesheet">
 		.center {
-			width:600px; 
+			width:1200px;
 			margin:0px auto; 
 			display:block;
 		}
-		
-		h1 {
-			text-align:center;	
-		}
-		
+				
 		.clear {
 			clear:both;
-			padding:10px;	
 		}
+
+        #view {
+            float: left;
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: #9acd32;
+        }
+
+        #view div {
+            position: absolute;
+
+        }
+
+        .cube {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+
+        .st {
+            background-color: red;
+        }
 	</style>
 </head>
 <body>
+    <div style="position: fixed; background-color: yellow; width: 25px; height: 25px; top: 0px; left: 0px;" onclick="DEMO.refreshWorld()"></div>
 	<div class="center">
-        <h1>HTML5 Adventure Game</h1>
-        <p>An example to show how HTML5 games can be developed easily with perfect physics</p>
-        <p>Your objective is reach the other side of the screen</p>
-        <p style="float:right;"><a href="http://www.andersonferminiano.com">Anderson Ferminiano</a>
-        <div class="clear"></div>
-        <canvas id="game" width='600' height='400'></canvas>
-    </p>
+        <div id="view" style="float: left">
+            <div class="cube" style="top:0px; left: 0px"></div>
+            <div class="cube" style="top:0px; left: 60px"></div>
+            <div class="cube" style="top:0px; left: 120px"></div>
+
+            <div class="st" style="width: 400px; height: 30px; top:200px; left: 10px;"></div>
+        </div>
+        <div style="float: left">
+            <canvas id="game" width='600' height='400'></canvas>
+        </div>
+    <div>
 </body>
 </html>
