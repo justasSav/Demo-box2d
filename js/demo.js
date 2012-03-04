@@ -88,8 +88,8 @@ var DEMO = {
 
             that.bodies.push( createBox(
                 that.world,
-                that.mouseX - (25/2),
-                that.mouseY - (25/2),
+                that.mouseX - 25,
+                that.mouseY - 25,
                 25,
                 25,
                 false
@@ -97,8 +97,8 @@ var DEMO = {
 
             var newBox = jQuery('<div class="cube"></div>');
             jQuery(newBox).css({
-                'left' : that.mouseX - (25/2),
-                'top' : that.mouseY - (25/2)
+                'left' : that.mouseX - 25,
+                'top' : that.mouseY - 25
             })
             that.DOMbodies.push(newBox);
             jQuery('body').append(newBox);
