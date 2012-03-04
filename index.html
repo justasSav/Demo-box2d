@@ -101,6 +101,7 @@
             width: 50px;
             height: 50px;
             background-color: green;
+            position: fixed;
         }
 
         .st {
@@ -109,18 +110,15 @@
 	</style>
 </head>
 <body>
-    <div style="position: fixed; background-color: yellow; width: 25px; height: 25px; top: 0px; left: 0px;" onclick="DEMO.refreshWorld()"></div>
-	<div class="center">
-        <div id="view" style="float: left">
-            <div class="cube" style="top:0px; left: 0px"></div>
-            <div class="cube" style="top:0px; left: 60px"></div>
-            <div class="cube" style="top:0px; left: 120px"></div>
 
-            <div class="st" style="width: 400px; height: 30px; top:200px; left: 10px;"></div>
-        </div>
-        <div style="float: left">
-            <canvas id="game" width='600' height='400'></canvas>
-        </div>
-    <div>
+
+
+            <div class="cube" style="top:0px; left: 400px"></div>
+            <div class="cube" style="top:0px; left: 460px"></div>
+            <div class="cube" style="top:0px; left: 520px"></div>
+
+
+            <div class="st" style="position: fixed; width: 100%; height: 30px; bottom:0px; left: 0px;"></div>
+
 </body>
 </html>
