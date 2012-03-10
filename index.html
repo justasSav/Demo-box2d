@@ -72,7 +72,7 @@
     <script src='js/box2d/dynamics/joints/b2RevoluteJoint.js'></script>
     <script src='js/box2d/dynamics/joints/b2RevoluteJointDef.js'></script>
     <script src='js/box2dutils.js'></script>
-    <script src='js/demo.js'></script>
+    <script src='js/demo2.js'></script>
     <style type="text/css" media="screen" rel="stylesheet">
 		.center {
 			width:1200px;
@@ -110,12 +110,22 @@
             margin: 0;
             padding: 0;
         }
+
+        canvas {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            display: block;
+            border: 2px solid black;
+        }
+
 	</style>
 </head>
 <body>
     <center>
         <h1>Click :)</h1>
     </center>
+    <canvas width="400" height="400"></canvas>
     <div class="st" style="position: fixed; width: 100%; height: 30px; top:-40px; left: 0px;"></div>
 
     <div class="st" style="position: fixed; width: 100%; height: 30px; bottom:-20px; left: 0px;"></div>
